@@ -1,0 +1,167 @@
+:root {
+  --primary: #4361ee;
+  --primary-dark: #3f37c9;
+  --success: #4cc9f0;
+  --danger: #f72585;
+  --warning: #ff9f1c;
+  --dark: #1d3557;
+  --gray: #6c757d;
+  --light: #f8f9fa;
+  --bg: #f0f4f8;
+  --card: #ffffff;
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  --radius: 12px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background: var(--bg);          /* ← fixed: use --bg (#f0f4f8) */
+  color: var(--dark);             /* ← changed to --dark (#1d3557) for visible text */
+  min-height: 100vh;
+  margin: 0;
+}
+
+table, th, td {
+  color: var(--dark);             /* ensure table text is always visible */
+}
+
+
+.status-available {
+  color: #27ae60;                 /* darker green */
+  font-weight: 600;
+}
+
+.status-low, .status-out-of-stock {
+  color: #c0392b;                 /* darker red */
+  font-weight: 700;
+}
+
+button.danger {
+  background: #e74c3c;
+  color: white;
+}
+
+button.danger:hover {
+  background: #c0392b;
+}
+
+
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+h1, h2, h3 {
+  color: var(--dark);
+}
+
+.card {
+  background: var(--card);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.forms-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 1.8rem;
+  margin-bottom: 2.5rem;
+}
+
+.form-group {
+  margin-bottom: 1.2rem;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: #444;
+}
+
+input, button {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+button {
+  background: var(--primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+button:hover {
+  background: var(--primary-dark);
+  transform: translateY(-1px);
+}
+
+button.danger {
+  background: var(--danger);
+}
+
+button.danger:hover {
+  background: #d81b60;
+}
+
+.status-available {
+  color: #2ecc71;
+  font-weight: 600;
+}
+
+.status-low {
+  color: #e74c3c;
+  font-weight: 700;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: white;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+th, td {
+  padding: 1rem 1.2rem;
+  text-align: left;
+}
+
+th {
+  background: var(--dark);
+  color: white;
+  font-weight: 600;
+}
+
+tr:nth-child(even) {
+  background: #f9fbfc;
+}
+
+tr:hover {
+  background: #f1f5f9;
+}
+
+.actions button {
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+  margin-right: 0.5rem;
+  border-radius: 6px;
+}
